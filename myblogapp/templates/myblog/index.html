@@ -7,6 +7,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=10.0">
     <title>yusuke.blog</title>
     <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <meta http-equiv="Content-Script-Type" content="text/javascript">
   </head>
 
@@ -26,32 +27,173 @@
     </section>
 
     <header>
-
+      <div id="fixed">
+        <div class="sp_menu">
+          <span class="logo">YUSUKE.BLOG</span>
+          <a href="" class="reservation "><img class="pc_content" src="{% static 'myblog/contact.png' %}" alt="contact"><img class="sp_content" src="" alt=""></a>
+          <!--
+          <div id="sns" class="pc_content">
+            <a href="tel:000" class="tel"><img src="./img/tel.png" alt="" ></a>
+            <a href="#"><img src="./img/twitter.png" alt="" ></a>
+            <a href="#"><img src="./img/facebook.png" alt="" ></a>
+            <a href="#"><img src="./img/insta.png" alt="" ></a>
+          </div>-->
+          
+          <div id="hamburger">
+            <div class="menu-trigger">
+              <span></span>
+              <span></span>
+              <span></span>
+             </div>
+           </div>
+           <div id="blind_menu">
+             <ul id="menu_list_sp">
+               <li class="menu_item">
+                 <a href="./index.php">top</a>
+               </li>
+               <li class="menu_item">
+                 <a href="./here.php">here</a>
+               </li>
+               <li class="menu_item">
+                 <a href="./there.php">there</a>
+               </li>
+             <li class="menu_item">
+                 <a href="https://coffeehere.stores.jp" target="_blank">web shop</a>
+               </li>
+               <li class="menu_item">
+                 <a href="./insta.php">instagram</a>
+               </li>
+               <li class="menu_item">
+                 <a href="./access.php">access</a>
+               </li>
+             
+               <li class="menu_item">
+                 <a href="./contact.php">contact</a>
+               </li>
+             </ul>
+           </div>
+        </div>
+        </div>
     </header>
+    <div id="side_menu" class="pc_content">
+      <div>
+        <a href="#">top</a>
+        <a href="#insta_area">instagram</a>
+      </div>
+    </div>
     <main>
 
-      <div id="top_image">
+      <section id="section_top">
+        <div id="top_image">
 
-        <div class="box">
-          <div class="bgImg src1"></div>
-          <div class="bgImg src2"></div>
-          <div class="bgImg src3"></div>
-          <div class="bgImg src4"></div>
+          <div class="box">
+            <div class="bgImg src1"></div>
+            <div class="bgImg src2"></div>
+            <div class="bgImg src3"></div>
+            <div class="bgImg src4"></div>
+          </div>
+          
+          <p style="display: block;">
+            <h1 class="top-text">Muramatsu Yusuke</h1>
+            <h6 class="sub-text">Web エンジニア</h6>
+          </p>
+          <a href="#insta_area" style="text-decoration: none; color: gray;">
+            <p style="width: 620px;">
+              SCROLL
+              <i class="fa fa-angle-double-down animated"></i>
+            </p>
+          </a>
         </div>
         
-        <p style="display: block;">
-          <img class="pc_content" src="{% static 'myblog/kousien.jpeg' %}" alt="Exceed Your Expectations">
-          <img class="sp_content" src="{% static 'myblog/kousien.jpeg' %}" alt="Exceed Your Expectations">
-        </p>
-        <a href="#insta_area">
-          <p><img src="{% static 'myblog/kousien.jpeg' %}" alt=""></p>
-        </a>
+      </section>
+      <section id="insta_area">
+        <li>
+          <a href="https://www.instagram.com/p/B_Re7_SpyKJ/" target="_blank"><img class="slide-bottom" src="https://images.pexels.com/photos/1687845/pexels-photo-1687845.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" style="opacity: 1; visibility: visible; position: relative; top: 0px;"></a></li>
+        <li>
+          <a href="https://www.instagram.com/p/B_RiGezpQes/" target="_blank"><img class="slide-bottom" src="https://images.pexels.com/photos/1061640/pexels-photo-1061640.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" style="opacity: 1; visibility: visible; position: relative; top: 0px;"></a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/p/B_RiQcipv9p/" target="_blank"><img class="slide-bottom" src="https://images.pexels.com/photos/2609954/pexels-photo-2609954.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" style="opacity: 1; visibility: visible; position: relative; top: 0px;"></a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/p/B_RiVGgJnTO/" target="_blank"><img class="slide-bottom" src="https://images.pexels.com/photos/1252399/pexels-photo-1252399.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" style="opacity: 1; visibility: visible; position: relative; top: 0px;"></a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/p/B_RigHmJnNQ/" target="_blank"><img class="slide-bottom" src="https://images.pexels.com/photos/2496880/pexels-photo-2496880.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" style="opacity: 1; visibility: visible; position: relative; top: 0px;"></a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/p/B_Rir-UpF3o/" target="_blank"><img class="slide-bottom" src="https://images.pexels.com/photos/2612228/pexels-photo-2612228.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" style="opacity: 1; visibility: visible; position: relative; top: 0px;"></a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/p/B_Riz09pGoB/" target="_blank"><img class="slide-bottom" src="https://images.pexels.com/photos/3232542/pexels-photo-3232542.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" style="opacity: 1; visibility: visible; position: relative; top: 0px;"></a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/p/B_Ri9VEJdAR/" target="_blank"><img class="slide-bottom" src="https://images.pexels.com/photos/2412023/pexels-photo-2412023.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" style="opacity: 1; visibility: visible; position: relative; top: 0px;"></a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/p/B_RjJSRJERE/" target="_blank"><img class="slide-bottom" src="https://images.pexels.com/photos/771079/pexels-photo-771079.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" style="opacity: 1; visibility: visible; position: relative; top: 0px;"></a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/p/B_RjR7dpOUM/" target="_blank"><img class="slide-bottom" src="https://images.pexels.com/photos/66090/pexels-photo-66090.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" style="opacity: 1; visibility: visible; position: relative; top: 0px;"></a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/p/B_RjfmrpkYZ/" target="_blank"><img class="slide-bottom" src="https://images.pexels.com/photos/558454/pexels-photo-558454.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" style="opacity: 1; visibility: visible; position: relative; top: 0px;"></a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/p/B_RjojiJAj0/" target="_blank"><img class="slide-bottom" src="https://images.pexels.com/photos/799445/pexels-photo-799445.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" style="opacity: 1; visibility: visible; position: relative; top: 0px;"></a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/p/B_Rjx5hpjJD/" target="_blank"><img class="slide-bottom" src="https://images.pexels.com/photos/167696/pexels-photo-167696.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" style="opacity: 1; visibility: visible; position: relative; top: 0px;"></a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/p/B_Rj7CAJhH0/" target="_blank"><img class="slide-bottom" src="https://images.pexels.com/photos/6757/feet-morning-adventure-camping.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" style="opacity: 1; visibility: visible; position: relative; top: 0px;"></a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/p/B_RkDIwpsFJ/" target="_blank"><img class="slide-bottom" src="https://images.pexels.com/photos/2666598/pexels-photo-2666598.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" style="opacity: 1; visibility: visible; position: relative; top: 0px;"></a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/p/B_RkK40pkt4/" target="_blank"><img class="slide-bottom" src="https://images.pexels.com/photos/1840394/pexels-photo-1840394.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" style="opacity: 1; visibility: visible; position: relative; top: 0px;"></a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/p/B_RkTkDJjSb/" target="_blank"><img class="slide-bottom" src="https://images.pexels.com/photos/2398220/pexels-photo-2398220.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" style="opacity: 1; visibility: visible; position: relative; top: 0px;"></a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/p/B_Rkc7lJTEl/" target="_blank"><img class="slide-bottom" src="https://images.pexels.com/photos/3455103/pexels-photo-3455103.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" style="opacity: 1; visibility: visible; position: relative; top: 0px;"></a>
+        </li>
+      </section>
+       
+      <div class="page">
+        <div class="target text1">scroll</div>
       </div>
+      <div class="page">
+        <div class="target text2">hello</div>
+      </div>
+      <div class="page">
+        <div class="target text3">left</div>
+      </div>
+      <div class="page">
+        <div class="target text4">right</div>
+      </div>
+      <div class="page">
+        <div class="target text5">top</div>
+      </div>
+      <div class="page">
+        <div class="target text6">animation</div>
+      </div>
+      <div class="page">
+        <img class="target image1" src="https://liginc.co.jp/wp-content/uploads/2017/10/150691334095133300_52.png">
+      </div>
+        
+       
     </main>
-    <footer>
-
+    <footer style="padding:150px 0 210px; text-align: center; font-size:10px;">
+      <p class="all_rights">Copyright © 2019  All Rights Reserved.</p>
     </footer>
   <script src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+  <script src="{% static 'js/index.js' %}"></script>
 
   </body>
 
