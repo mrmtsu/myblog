@@ -1,0 +1,4 @@
+staticfiles
+
+db.sqlite3
+myblogproject/settings_secret.py

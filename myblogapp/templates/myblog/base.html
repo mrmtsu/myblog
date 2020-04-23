@@ -1,0 +1,83 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=10.0">
+    <title>yusuke.blog</title>
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+  </head>
+
+  <body>
+    
+    <div id="my-spinner" class="box-name">
+      <div class="spinner type1">
+        <span>MuramatsuYusuke</span>
+      </div>
+    </div>
+
+    <div class="shutter"></div>
+ 
+    <section class="container">
+    </section>
+
+    <header>
+      <div id="fixed">
+        <div class="sp_menu">
+          <span class="logo">YUSUKE.BLOG</span>
+          <a href="{% url 'myblog:contact' %}" class="reservation "><img class="pc_content" src="{% static 'myblog/contact.png' %}" alt="contact"><img class="sp_content" src="" alt=""></a>
+          
+          <div id="hamburger">
+            <div class="menu-trigger">
+              <span></span>
+              <span></span>
+              <span></span>
+             </div>
+          </div>
+           <div id="blind_menu">
+             <ul id="menu_list_sp" style="padding: 0;">
+               <li class="menu_item">
+                 <a href="./index.php" class="menu-list">About</a>
+               </li>
+               <li class="menu_item">
+                 <a href="./here.php" class="menu-list">Portfolio</a>
+               </li>
+               <li class="menu_item">
+                 <a href="./there.php" class="menu-list">Blog</a>
+               </li>
+               <li class="menu_item">
+                 <a href="{% url 'myblog:contact' %}"  class="menu-list">Contact</a>
+               </li>
+             </ul>
+           </div>
+          </div>
+
+      </div>
+    </header>
+    <div id="side_menu" class="pc_content">
+      <div>
+        <a href="#">top</a>
+        <a href="#works">Portfolio</a>
+        <a href="#blog">Blog</a>
+        <a href="#insta_area">Instagram</a>
+      </div>
+    </div>
+    <main>
+      {% block content %}
+      {% endblock %}
+    </main>
+    <footer style="padding:150px 0 210px; text-align: center; font-size:10px;">
+      <p class="all_rights">Copyright © 2019  All Rights Reserved.</p>
+    </footer>
+  <script src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+  <script src="{% static 'js/index.js' %}"></script>
+
+  </body>
+
+</html>

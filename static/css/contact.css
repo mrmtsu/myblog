@@ -1,0 +1,125 @@
+#contact-form{
+  margin: 50px auto;
+  width: 70%;
+}
+
+
+@media only screen and (min-width: 760px){
+  #main h2.ttl.large {
+    margin: 0 0 70px 0;
+    font-size: 46px;
+    text-align: left;
+  }
+}
+
+@media only screen and (min-width: 760px){
+  .txtBox {
+    margin-bottom: 50px;
+    font-size: 14px;
+  }
+}
+
+.wpcf7 {
+  margin: 0;
+  padding: 0;
+}
+
+.screen-reader-response {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  width: 1px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.contactForm dt {
+  display: block;
+  margin-bottom: 3px;
+  font-size: 13px;
+}
+
+.contactForm dd {
+  margin-bottom: 15px;
+}
+
+.wpcf7-form-control-wrap {
+  position: relative;
+}
+
+.contactForm dd.w01 input {
+  width: 250px;
+  height: 20px;
+  font-size: 16px;
+  border: 1px solid #bbbbbb;
+}
+
+@media only screen and (min-width: 760px){
+  .contactForm dd.w01 input {
+    width: 350px;
+  }
+}
+
+.contactForm dt {
+  display: block;
+  margin-bottom: 3px;
+  font-size: 13px;
+}
+
+.contactForm dt span.required {
+  margin-left: 10px;
+  padding: 1px 3px;
+  background-color: #f45555;
+  font-size: 10px;
+  color: #FFFFFF;
+}
+
+.contactForm dd.w02 textarea {
+  width: 250px;
+  font-size: 16px;
+  border: 1px solid #bbbbbb;
+}
+
+@media only screen and (min-width: 760px){
+  .contactForm dd.w02 textarea {
+    width: 400px;
+  }
+}
+
+input.submitBtn {
+  width: 150px;
+  height: 40px;
+  margin-top: 20px;
+  cursor: pointer;
+  background-color: #8e8e8e;
+  border: none;
+  font-size: 15px;
+  font-weight: bold;
+  color: #FFFFFF;
+}
+
+label {
+  display: block;
+  margin-bottom: 3px;
+  font-size: 13px;
+  font-family: 'Dosis', "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", cursive;
+}
+
+tr {
+  margin-bottom: 15px;
+}
+
+.helptext {
+  font-size: 8px;
+}
+
+#id_subject, #id_sender {
+  width: 280px;
+  height: 20px;
+}
+
+#id_message {
+  width: 280px;
+}

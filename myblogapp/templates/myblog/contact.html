@@ -1,0 +1,39 @@
+{% extends 'myblog/base.html' %}
+{% load static %} 
+
+{% block content %}
+<link href="{% static 'css/contact.css' %}" rel="stylesheet">
+<section class="contBox cf" id="contact-form">
+  <h2 class="ttl large"style="margin-bottom: 70px;">Contact</h2>
+  <p class="txtBox">制作の依頼・ご相談などお気軽にお問い合わせくださいませ。<br>下記フォームよりわかる範囲でご記入ください。必須の項目は必ずご記入お願いします。</p>
+          <div role="form" class="wpcf7" id="wpcf7-f147-p8-o1" lang="ja" dir="ltr">
+  <div class="screen-reader-response"></div>
+  
+
+  <form action="{% url 'myblog:contact' %}" method="post" class="wpcf7-form" novalidate="novalidate">
+    {% csrf_token %}
+  <table>
+      {{ form.as_table }}
+  </table><br>
+  <div class="wpcf7-form-control-wrap">
+    <div data-sitekey="6Let6GAUAAAAALgf36ff7P-4wUN_unD2fQxkQukv" class="wpcf7-form-control g-recaptcha wpcf7-recaptcha">
+      <div style="width: 304px; height: 78px;">
+        <div>
+          <iframe src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6Let6GAUAAAAALgf36ff7P-4wUN_unD2fQxkQukv&amp;co=aHR0cHM6Ly91LWQtbC5qcDo0NDM.&amp;hl=ja&amp;v=zItNOfzbrqVGbb4QFYpPpcrw&amp;size=normal&amp;cb=7sp9r3v03kkw" width="304" height="78" role="presentation" name="a-ldhw6aiye5i3" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox">
+          </iframe>
+        </div>
+        <textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea>
+      </div>
+      <iframe style="display: none;"></iframe>
+    </div>
+  </div>
+      <input type="submit" value="送信" class="wpcf7-form-control submitBtn">
+  </form>
+
+
+
+  
+  
+  
+</section>
+{% endblock %}
