@@ -3,6 +3,11 @@ body {
   margin: 0;
   padding: 0px;
 }
+
+ul, ol, li {
+  list-style: none;
+}
+
 header {
   background: rgba(255,255,255,0.8);
   width: 100%;
@@ -91,79 +96,10 @@ header {
   font-style: italic;
 }
 
-/* 1番目のアニメーションの場合 */
-/* .spinner.type1 {
-  border-radius: 50%;
-  border-width: 8px;
-  border-style: solid;
-  border-color: #fff rgba(255, 255, 255, 0.12) rgba(255, 255, 255, 0.12);
-  /* ローディング要素のアニメーションを指定 */
-  /* -webkit-animation: spinner1_1 2.5s infinite linear forwards;
-          animation: spinner1_1 2.5s infinite linear forwards;
-} */
 .spinner.type1 span {
   /* Loading テキストのアニメーションを指定 */
   animation: spinner_loading_text 0.5s infinite linear forwards reverse;
 }
- 
-/* ローディング要素のアニメーション内容 */
-/* @-webkit-keyframes spinner1_1 {
-  0% {
-    -webkit-transform: translate(-50%, -50%) rotate(0);
-            transform: translate(-50%, -50%) rotate(0);
-  }
-  100% {
-    -webkit-transform: translate(-50%, -50%) rotate(360deg);
-            transform: translate(-50%, -50%) rotate(360deg);
-  }
-}
- 
-@keyframes spinner1_1 {
-  0% {
-    -webkit-transform: translate(-50%, -50%) rotate(0);
-            transform: translate(-50%, -50%) rotate(0);
-  }
-  100% {
-    -webkit-transform: translate(-50%, -50%) rotate(360deg);
-            transform: translate(-50%, -50%) rotate(360deg);
-  }
-} */
- 
-/* Loading テキストのアニメーション内容 */
-/* @-webkit-keyframes spinner_loading_text {
-  0% {
-    opacity: 1;
-    -webkit-transform: translate(-50%, -50%) rotate(0deg);
-            transform: translate(-50%, -50%) rotate(0deg);
-  }
-  50% {
-    opacity: 0;
-    -webkit-transform: translate(-50%, -50%) rotate(180deg);
-            transform: translate(-50%, -50%) rotate(180deg);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: translate(-50%, -50%) rotate(360deg);
-            transform: translate(-50%, -50%) rotate(360deg);
-  }
-}
-@keyframes spinner_loading_text {
-  0% {
-    opacity: 1;
-    -webkit-transform: translate(-50%, -50%) rotate(0deg);
-            transform: translate(-50%, -50%) rotate(0deg);
-  }
-  50% {
-    opacity: 0;
-    -webkit-transform: translate(-50%, -50%) rotate(180deg);
-            transform: translate(-50%, -50%) rotate(180deg);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: translate(-50%, -50%) rotate(360deg);
-            transform: translate(-50%, -50%) rotate(360deg);
-  }
-} */
 
 .box-name{
   position: fixed;
@@ -264,6 +200,7 @@ header {
 
 #section_top{
   height:100vh;
+  margin-bottom: 150px;
 }
 
 #top_image {
@@ -432,8 +369,8 @@ header {
 }
 
 #insta_area li img {
-  width: 118px;
-  height: 118px;
+  width: 120px;
+  height: 120px;
   object-fit: cover;
   margin-right: 2px;
 }
@@ -458,6 +395,18 @@ footer {
 }
 
 #side_menu a:first-child {
+  margin: 27px 0 27px 11px;
+  text-decoration: none;
+  color: gray;
+}
+
+#side_menu a:nth-child(2) {
+  margin: 27px 0 27px 11px;
+  text-decoration: none;
+  color: gray;
+}
+
+#side_menu a:nth-child(3) {
   margin: 27px 0 27px 11px;
   text-decoration: none;
   color: gray;
@@ -639,6 +588,7 @@ margin: 23px 0;
     text-align: center;
     z-index: 10000;
     font-family: "MS Serif", "New York", serif;
+    margin: 50px 0;
 }
 
 .menu_item a{
@@ -657,6 +607,11 @@ margin: 23px 0;
   top:60px;
 }
 
+.menu-list {
+  text-decoration: none;
+  font-size: 40px;
+  font-family: Helvetica, '游ゴシック', 'Yu Gothic', YuGothic, HiraKakuProN-W3, 'メイリオ', Meiryo, sans-serif;
+}
 
 
 
@@ -684,10 +639,187 @@ img {
   
 
 
+/* ポートフォリオ ---------------------------------------------------------------------------------------------------------------*/
+.cf {
+  zoom: 1;
+}
+
+.cf:before, .cf:after {
+  content: "";
+  display: table;
+}
+
+.cf:after {
+  clear: both;
+}
+
+.ttl {
+  margin-bottom: 40px;
+  text-align: center;
+  line-height: 1.0;
+  font-family: 'Lato', sans-serif;
+  font-weight: 100;
+  font-size: 40px;
+  letter-spacing: 0.05em;
+}
+
+@media only screen and (min-width: 961px){
+  #main h2.ttl {
+    margin-bottom: 65px;
+    font-size: 50px;
+  }
+}
+
+#works {
+  margin-bottom: 70px;
+  padding: 0 20px;
+}
+
+@media only screen and (min-width: 961px){
+  #works {
+    width: 920px;
+    margin: 80px auto 150px auto;
+    padding: 0;
+  }
+}
+
+#works li {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+@media only screen and (min-width: 961px){
+  #works li {
+    width: 280px;
+    margin-right: 40px;
+  }
+}
 
 
+@media only screen and (min-width: 760px) {
+  #works li {
+    box-sizing: border-box;
+    display: inline-block;
+    width: 30%;
+    margin-right: 2%;
+    margin-bottom: 60px;
+    border: 1px solid #e0e0e0;
+    vertical-align: top;
+  }
+}
+
+#works li img {
+  width: 280px;
+  height: 260px;
+}
+
+@media only screen and (min-width: 760px){
+  #works li img {
+    width: 100%;
+    height: 243.27px;
+  }
+}
+
+@media only screen and (min-width: 760px){
+  main:before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 8px;
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    background-color: #ff0000;
+    z-index: 1100;
+  }
+}
 
 
+/* BLOG ---------------------------------------------------------------------------------------------------------------*/
+#blog {
+    margin-bottom: 30px;
+    padding: 0 30px;
+}
+
+@media only screen and (min-width: 961px){
+  #blog {
+    width: 920px;
+    margin: 0 auto 150px auto;
+    padding: 0;
+  }
+}
+
+#blog li {
+  margin-bottom: 40px;
+  text-align: right;
+}
+
+@media only screen and (min-width: 961px){
+  #blog li {
+    width: 280px;
+    margin-right: 40px;
+  }
+}
+
+@media only screen and (min-width: 760px){
+  #blog li {
+    display: inline-block;
+    width: 30%;
+    margin-right: 2%;
+    margin-bottom: 60px;
+    vertical-align: top;
+  }
+}
+
+#blog .photo {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+#blog .photo img {
+  width: 280px;
+  height: 260px;
+}
+
+@media only screen and (min-width: 760px){
+  #blog .photo img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+#blog .cont {
+  margin: 0 auto 20px;
+  text-align: left;
+  font-size: 14px;
+  width: 264px;
+  height: 104px;
+}
+
+@media only screen and (min-width: 760px){
+  #blog .cont {
+    margin-bottom: 20px;
+  }
+}
+
+#blog .detail {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  padding: 8px 12px;
+  background-color: #eee;
+  letter-spacing: 0.1em;
+  color: #333;
+  text-decoration: none;
+}
+
+@media only screen and (min-width: 760px){
+  #blog .detail {
+    padding: 8px 12px;
+    background-color: #eee;
+  }
+}
 
 
 
