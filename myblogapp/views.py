@@ -57,7 +57,7 @@ class IndexView(ListView):
   model = Post
   template_name = 'myblog/index.html'
 
-  paginate_by = 2
+  paginate_by = 3
 
 class CategoryListView(ListView):
   template_name = 'myblog/category_list.html'

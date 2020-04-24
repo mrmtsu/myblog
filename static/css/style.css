@@ -703,7 +703,6 @@ img {
     width: 30%;
     margin-right: 2%;
     margin-bottom: 60px;
-    border: 1px solid #e0e0e0;
     vertical-align: top;
   }
 }
@@ -863,6 +862,9 @@ img {
   line-height: 16px;
 }
 
+.photo {
+  border: 1px solid #e0e0e0;
+}
 
 
 
@@ -933,7 +935,7 @@ img {
   height: auto;
 }
 #insta_area li img {
-  width: 130px;
+  width: 118px;
   height: 130px;
   object-fit: cover;
   margin-right: 2px;
