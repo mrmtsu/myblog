@@ -25,14 +25,7 @@ SECRET_KEY = '9r-as8u0twmuzo6ix1zjz&p6)rbcq(o!^$1+(n+yek#)280drv'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-try:
-    from myblogproject.local_settings import *
-except ImportError:
-    pass
 
-if not DEBUG:
-    import django_heroku
-    django_heroku.settings(locals())
 
 ALLOWED_HOSTS = [myblog-yusuke2020.herokuapp.com]
 
@@ -145,3 +138,13 @@ EMAIL_USE_TLS = True
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
+
+
+try:
+    from myblogproject.local_settings import *
+except ImportError:
+    pass
+
+if not DEBUG:
+    import django_heroku
+    django_heroku.settings(locals())
