@@ -27,7 +27,7 @@ DEBUG = False
 
 
 
-ALLOWED_HOSTS = [myblog-yusuke2020.herokuapp.com]
+ALLOWED_HOSTS = ["myblog-yusuke2020.herokuapp.com"]
 
 
 # Application definition
