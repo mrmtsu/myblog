@@ -1,0 +1,19 @@
+{% if is_paginated %}
+<nav class="pagenate-list">
+  {% if page_obj.has_previous %}
+  <a href="?page={{ page_obj.previous_page_number }}" style="text-decoration: none; color: gray;">前へ</a>
+  {% endif %}
+
+  {% for num in paginator.page_range %}
+  {% if page_obj.number == num %}
+  <span style="text-decoration: none; color: gray; font-weight: 600;">{{ num }}</span>
+  {% else %}
+  <a href="?page={{ num }}" style="text-decoration: none; color: gray;">{{ num }}</a>
+  {% endif %}
+  {% endfor %}
+
+  {% if page_obj.has_next %}
+  <a href="?page={{ page_obj.next_page_number }}" style="text-decoration: none; color: gray;">次へ</a>
+  {% endif %}
+</nav>
+{% endif %}

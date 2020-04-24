@@ -823,13 +823,45 @@ img {
 
 
 
+.pagenate-list {
+  text-align: center;
+}
+
+.blog-main {
+  margin-right: 100px;
+  width: 75%;
+}
+
+.list-group {
+  padding: 0;
+}
+
+.list-group-item {
+  display: block;
+  margin: 10px 0 30px;
+  width: 200px;
+  text-align: left;
+}
+
+.card-link {
+  text-decoration: none;
+  color: gray;
+  width: 200px;
+}
 
 
-
-
-
-
-
+.badge {
+  background-color: red;
+  color: white;
+  font-size: 12px;
+  font-weight: 700;
+  border-radius: 15px;
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  text-align: center;
+  line-height: 16px;
+}
 
 
 

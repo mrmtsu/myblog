@@ -1,0 +1,30 @@
+<div class="card mb-3">
+  <div class="card-header">
+    Category
+  </div>
+  <ul class="list-group">
+    {% for category in categories|dictsort:"id" %}
+    <li class="list-group-item" style="display: block; margin: 10px 0 30px; width: 200px; text-align: left;">
+      <a href="{% url 'myblog:category_post' category.slug %}" class="card-link">{{ category.name }}</a>
+      <span class="badge">{{ category.num_posts }}</span>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    Tag
+  </div>
+  <ul class="list-group">
+    {% for tag in tags|dictsortreversed:"num_posts"|slice:":5" %}
+    <li class="list-group-item" style="display: block; margin: 10px 0 30px; width: 200px; text-align: left;">
+      <a href="{% url 'myblog:tag_post' tag.slug %}" class="card-link">{{ tag.name }}</a>
+      <span class="badge">{{ tag.num_posts }}</span>
+    </li>
+    {% endfor %}
+  </ul>
+  <div class="card-body text-center">
+    <a href="{% url 'myblog:tag_list' %}" class="card-link">すべてのタグを見る</a>
+  </div>
+</div>

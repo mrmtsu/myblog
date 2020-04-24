@@ -63,6 +63,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'myblogproject.context_processors.common',
             ],
         },
     },
@@ -129,3 +130,6 @@ EMAIL_HOST_USER = GMAIL_HOST_USER
 EMAIL_HOST_PASSWORD = GMAIL_PASSWORD
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
