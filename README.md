@@ -13,137 +13,27 @@ MYBLOG
 - https://myblog-yusuke2020.herokuapp.com/myblog/
 
 # PRODUCTION BACKGROUND
-- キャンプをしてみたい・始めてみたいけどどうしたらいいかわからない。
-- キャンプの情報を発信している人を見つける・発見するのが手間。
-- 雑誌だと約１ヶ月ごとにしか情報を得られない。（バックグランドもあまり書店に置いていない）
-- キャンプに関するサイトが実際にあるが、サイトを開くとおすすめ商品がいきなり出て来るため、見るきにならない。
-  <br>
-  ↑↑
-  <br>
-- キャンプをしている人が実際にどんな感じで行なっているか写真を投稿するアプリ
-- キャンプに関する情報を一つに集約
-- ユーザーが自由に投稿、閲覧でき、どのようにキャンプをしているのか参考になる。
-- 古い投稿もいつでも見ることができる
-- ユーザー投稿が主体のアプリとなるため、企業の押し付け感がなく情報の信用性が上がる。
+- Ruby on Railsを主に勉強していたため、他の言語であるPython/Djangoで開発を行ってみたかったため
+- Blogを作成することで自らのアウトプットの場を作れるのではないかと思ったため
 
 # DEMO
 - トップページ
-  ![image](https://user-images.githubusercontent.com/60598010/77853499-5bec8000-721f-11ea-82a5-c9e49523fe62.png)
+  ![image](https://user-images.githubusercontent.com/60598010/80267995-0badf400-86df-11ea-8adc-d56223c62cc9.png)
   <br>
   <br>
   <br>
   <br>
-- 投稿詳細画面
-  ![image](https://user-images.githubusercontent.com/60598010/77854360-d66bce80-7224-11ea-8614-3d2ff1d65a05.png)
-  <br>
-  <br>
-  <br>
-  <br>
-- コメント画面
-  ![image](https://user-images.githubusercontent.com/60598010/77854421-4bd79f00-7225-11ea-9499-cf2e87da11cb.png)
-  <br>
-  <br>
-  <br>
-  <br>
-- 位置情報画面
-  ![image](https://user-images.githubusercontent.com/60598010/77854527-e0420180-7225-11ea-896e-24f631be031b.png)
 
 # INGENUITY
-- 条件分岐を用いたこと。ログインしているユーザー、フォローをすることでそれぞれブラウザに上がってくる情報を変更した点。
-- viewの統一感
+- MTCを意識して、しっかり理解しながら開発したこと
+- viewでシンプルさを意識したこと
 
 # 今後実装したい機能
-- 投稿画像に紐づいた商品情報
-- 商品購入機能
-- 特集記事（キャンプグルメやキャンプ場など）
-- 地名でも検索できるようにすること
-- 動画投稿
+- コメント機能
+- 記事検索機能
 
-* Ruby version
-2.5.1
+* Python version
+3.7.3
 * System dependencies
-Ruby/Ruby on Rails/MySQL/Github/AWS/Visual Studio Code
-* Configuration
+Python/Django/PostgreSQL/Github/Heroku/Visual Studio Code
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-
-
-## usersテーブル
-|Column|Type|Options|
-|------|----|-------|
-|name|string|null: false|
-|email|string|null: false|
-|password|string|null: false|
-|avatar|string||
-### Association
-- has_many :posts
-- has_many :comments
-- has_many :favorites
-- has_many :bookmarks
-
-
-## postsテーブル
-|Column|Type|Options|
-|------|----|-------|
-|image|text||
-|text|text||
-|address|string||
-|latitude|float||
-|longitude|float||
-|user|references|foreign_key: true|
-### Association
-- belongs_to :user
-- has_many :comments
-
-## commentsテーブル
-|Column|Type|Options|
-|------|----|-------|
-|text|text|null: false|
-|user|references|foreign_key: true|
-|post|references|foreign_key: true|
-### Association
-- belongs_to :post
-- belongs_to :user
-
-## relationshipsテーブル
-|Column|Type|Options|
-|------|----|-------|
-|user_id|integer|null: false, foreign_key: true|
-|post_id|integer|null: false, foreign_key: true|
-### Association
-- belongs_to :post
-- belongs_to :user
-
-## hashtags_postsテーブル
-|Column|Type|Options|
-|------|----|-------|
-|post_id|integer||
-|hashtag_id|integer||
-### Association
-- belongs_to :post
-- belongs_to :hashtag
-
-## hashtagsテーブル
-|Column|Type|Options|
-|------|----|-------|
-|hashname|string||
-### Association
-- belongs_to :hashtags_post
-
-## favoritesテーブル
-|Column|Type|Options|
-|------|----|-------|
-|user|references|null: false|
-|post|references|null: false|
-### Association
-- belongs_to :post
-- belongs_to :user
