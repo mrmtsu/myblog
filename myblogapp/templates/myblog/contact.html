@@ -1,5 +1,49 @@
-{% extends 'myblog/base.html' %}
 {% load static %} 
+
+<head>
+  <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=10.0">
+  <title>yusuke.blog</title>
+  <link href="{% static 'css/style.css' %}" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <meta http-equiv="Content-Script-Type" content="text/javascript">
+</head>
+<header>
+  <div id="fixed">
+    <div class="sp_menu">
+      <span class="logo">YUSUKE.BLOG</span>
+      <a href="{% url 'myblog:contact' %}" class="reservation "><img class="pc_content" src="{% static 'myblog/contact.png' %}" alt="contact"><img class="sp_content" src="" alt=""></a>
+      
+      <div id="hamburger">
+        <div class="menu-trigger">
+          <span></span>
+          <span></span>
+          <span></span>
+         </div>
+      </div>
+       <div id="blind_menu">
+         <ul id="menu_list_sp" style="padding: 0;">
+           <li class="menu_item">
+             <a href="../" class="menu-list">Top</a>
+           </li>
+           <li class="menu_item">
+             <a href="./index.php" class="menu-list">About</a>
+           </li>
+           <li class="menu_item">
+             <a href="./here.php" class="menu-list">Portfolio</a>
+           </li>
+           <li class="menu_item">
+             <a href="../../../myblog/#blog" class="menu-list">Blog</a>
+           </li>
+           <li class="menu_item">
+             <a href="{% url 'myblog:contact' %}"  class="menu-list">Contact</a>
+           </li>
+         </ul>
+       </div>
+      </div>
+
+  </div>
+</header>
 
 {% block content %}
 <link href="{% static 'css/contact.css' %}" rel="stylesheet">
@@ -15,18 +59,6 @@
   <table>
       {{ form.as_table }}
   </table><br>
-  <div class="wpcf7-form-control-wrap">
-    <div data-sitekey="6Let6GAUAAAAALgf36ff7P-4wUN_unD2fQxkQukv" class="wpcf7-form-control g-recaptcha wpcf7-recaptcha">
-      <div style="width: 304px; height: 78px;">
-        <div>
-          <iframe src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6Let6GAUAAAAALgf36ff7P-4wUN_unD2fQxkQukv&amp;co=aHR0cHM6Ly91LWQtbC5qcDo0NDM.&amp;hl=ja&amp;v=zItNOfzbrqVGbb4QFYpPpcrw&amp;size=normal&amp;cb=7sp9r3v03kkw" width="304" height="78" role="presentation" name="a-ldhw6aiye5i3" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox">
-          </iframe>
-        </div>
-        <textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea>
-      </div>
-      <iframe style="display: none;"></iframe>
-    </div>
-  </div>
       <input type="submit" value="送信" class="wpcf7-form-control submitBtn">
   </form>
 
@@ -37,3 +69,12 @@
   
 </section>
 {% endblock %}
+
+<footer style="padding:150px 0 210px; text-align: center; font-size:10px;">
+  <p class="all_rights">Copyright © 2019  All Rights Reserved.</p>
+</footer>
+<script src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+<script src="{% static 'js/index.js' %}"></script>
