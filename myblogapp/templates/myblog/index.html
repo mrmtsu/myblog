@@ -60,7 +60,8 @@
     <li>
       {% if post.image %}
       <p class="photo"><a href="{% url 'myblog:post_detail' post.id %}">
-        <img style="width: 264px; height: 245.14px;" src="{{ post.image.url }}" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="{{ post.title }}">
+        <!-- <img style="width: 264px; height: 245.14px;" src="{{ post.image.url }}" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="{{ post.title }}"> -->
+        <img style="width: 264px; height: 245.14px;" src="{% static 'myblog/yusuke.png' %}" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="{{ post.title }}">
       </a></p>
       <p class="cont">{{ post.title }}</p>
       <a href="{% url 'myblog:post_detail' post.id %}" class="detail">more</a>
