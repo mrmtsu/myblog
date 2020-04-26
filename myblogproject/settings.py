@@ -133,12 +133,6 @@ STATICFILES_DIRS = [
 ]
 
 
-BASE_DIR = environ.Path(__file__)
-env = environ.Env()
-READ_DOT_ENV_FILE = env.bool('DJANGO_READ_DOT_ENV_FILE', default=False)
-
-if READ_DOT_ENV_FILE:
-    env.read_env(str(BASE_DIR.path('.env')))
 
 
 EMAIL_HOST = 'smtp.gmail.com'
