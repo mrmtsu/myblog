@@ -132,13 +132,10 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static')
 ]
 
-import environ
-env = environ.Env()
-env.read_env('.env')
 
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = env('GMAIL_HOST_USER')
-EMAIL_HOST_PASSWORD = env('GMAIL_PASSWORD')
+EMAIL_HOST_USER = 'GMAIL_HOST_USER'
+EMAIL_HOST_PASSWORD = 'GMAIL_PASSWORD'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 
