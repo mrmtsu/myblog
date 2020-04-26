@@ -2,3 +2,4 @@ staticfiles
 myblogproject/local_settings.py
 db.sqlite3
 myblogproject/settings_secret.py
+.env
